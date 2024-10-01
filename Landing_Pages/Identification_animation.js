@@ -1,10 +1,14 @@
-import axios from 'axios';
+// import axios from 'axios';
 
-// Requête GET vers le back-end
-axios.get('http://localhost:27017/DB1')
-  .then(response => {
-    console.log(response.data);
-  })
-  .catch(error => {
-    console.error('Erreur lors de la requête', error);
-  });
+const getUsers = () => {
+    // Récupérer les utilisateurs
+axios.get('http://localhost:3000/users')
+.then(response => {
+  console.log(response.data); // Affichez les utilisateurs récupérés
+})
+.catch(error => {
+  console.error('Erreur lors de la récupération des utilisateurs', error);
+});
+
+} 
+getUsers();
