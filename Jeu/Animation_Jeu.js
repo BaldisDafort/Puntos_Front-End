@@ -1,22 +1,6 @@
-// const cells = document.querySelectorAll('td')
-
-// cells.forEach(cell => {
-//     cell.addEventListener("click", colorCase);
-// });
-
-// function colorCase(event) {
-//     const cell = event.target;
-//     const currentColor = window.getComputedStyle(cell).backgroundColor
-//     if (currentColor === "rgba(0, 0, 0, 0)" || currentColor === "transparent") {
-//         cell.style.backgroundColor = "blue"
-//     } else {
-//         alert("vueillez choisir une case vide !")
-//     }
-// }
-
 // Déclaration des variables
-var largeur = 9;
-var hauteur = 5;
+var largeur = 7;
+var hauteur = 6;
 var plateau = [];
 
 // Fonction pour initialiser le plateau
