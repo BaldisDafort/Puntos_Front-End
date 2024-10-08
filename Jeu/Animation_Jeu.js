@@ -3,13 +3,31 @@ var largeur = 7;
 var hauteur = 6;
 var plateau = [];
 var compteJoueur = false;
+alert("Tour du joueur 1 !")
 
 function colorCase(event) {
-    if (event.target.style.backgroundColor === "" || event.target.style.backgroundColor === "green") {
+    if(compteJoueur == false) {
+        if(event.target.style.backgroundColor == "yellow" || event.target.style.backgroundColor == "red" ){
+            alert("Rejoue en cliquant sur une case vide")
+            return 
+        }
         event.target.style.backgroundColor = "red"
-    }else if(event.target.style.backgroundColor === "red"){
-        event.target.style.backgroundColor = "green"
+        alert("Tour du joueur 2 !")
+        compteJoueur = true
+    }else {
+        if(event.target.style.backgroundColor == "yellow" || event.target.style.backgroundColor == "red" ){
+            alert("Rejoue en cliquant sur une case vide")
+            return 
+        }
+        event.target.style.backgroundColor = "yellow"
+        alert("Tour du joueur 1 !")
+        compteJoueur = false
     }
+    // if (event.target.style.backgroundColor === "" || event.target.style.backgroundColor === "green") {
+    //     event.target.style.backgroundColor = "red"
+    // }else if(event.target.style.backgroundColor === "red"){
+    //     event.target.style.backgroundColor = "green"
+    // }
 }
 
 // Fonction pour initialiser le plateau
