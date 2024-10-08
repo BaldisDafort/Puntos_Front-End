@@ -2,6 +2,15 @@
 var largeur = 7;
 var hauteur = 6;
 var plateau = [];
+var compteJoueur = false;
+
+function colorCase(event) {
+    if (event.target.style.backgroundColor === "" || event.target.style.backgroundColor === "green") {
+        event.target.style.backgroundColor = "red"
+    }else if(event.target.style.backgroundColor === "red"){
+        event.target.style.backgroundColor = "green"
+    }
+}
 
 // Fonction pour initialiser le plateau
 function initPlateau() {
@@ -14,11 +23,11 @@ function initPlateau() {
         plateau[i] = [];
         for (var j = 0; j < largeur; j++) {
             var cellule = document.createElement('td');
-            var img = document.createElement('img');
-            // img.src = 'C:\Users\jolan\BTS SIO\SLAM projet\Puntos_front\Puntos\images.jpg'; 
-            // cellule.appendChild(img);
+
+            cellule.addEventListener('click', colorCase)
+
             ligne.appendChild(cellule);
-            plateau[i][j] = img;
+            plateau[i][j] = cellule;
         }
         tableau.appendChild(ligne);
     }
@@ -26,6 +35,8 @@ function initPlateau() {
     // Ajout du tableau à la div
     contenuDiv.appendChild(tableau);
 }
+
+
 
 // Événement au chargement de la page pour lancer initPlateau
 window.addEventListener('load', initPlateau);
