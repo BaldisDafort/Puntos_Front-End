@@ -15,8 +15,8 @@ function initPlateau() {
         for (var j = 0; j < largeur; j++) {
             var cellule = document.createElement('td');
             var img = document.createElement('img');
-            img.src = 'fondb.jpg'; 
-            cellule.appendChild(img);
+            // img.src = 'C:\Users\jolan\BTS SIO\SLAM projet\Puntos_front\Puntos\images.jpg'; 
+            // cellule.appendChild(img);
             ligne.appendChild(cellule);
             plateau[i][j] = img;
         }
