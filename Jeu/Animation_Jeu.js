@@ -78,11 +78,16 @@ function colorCase(event) {
     }
     if (verifVictoire()){
         if(compteJoueur == true){
-            alert("Le joueur 2 à gagner !")
-        }else{
             alert("Le joueur 1 à gagner !")
+            location.reload()
+            return
+        }else{
+            alert("Le joueur 2 à gagner !")  
+            location.reload() 
+            return    
         }
     }
+    
 }
 
 // Fonction pour initialiser le plateau
