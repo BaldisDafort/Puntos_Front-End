@@ -5,6 +5,7 @@
     justify-content: center;
 }
 
+
 table {
     display: flex;
     flex-direction: column;
@@ -26,4 +27,11 @@ td {
 .parent {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 18px;
+    border-radius: 30px;
 }
