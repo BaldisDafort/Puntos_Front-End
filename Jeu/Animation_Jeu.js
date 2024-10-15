@@ -64,47 +64,51 @@ var terminer = false
 
 
 function colorCase(event) {
-    if(compteJoueur == false) {
-        if(event.target.style.backgroundColor == "yellow" || event.target.style.backgroundColor == "red" ){
-            alert("Rejoue en cliquant sur une case vide")
-            return 
+    if(terminer == true){
+        return
+    }else{
+        if(compteJoueur == false) {
+            if(event.target.style.backgroundColor == "yellow" || event.target.style.backgroundColor == "red" ){
+                alert("Rejoue en cliquant sur une case vide")
+                return 
+            }
+            event.target.style.backgroundColor = "red"
+            Tour.innerHTML = "Tour du joueur 2"
+            // alert("Tour du joueur 2 !")
+            compteJoueur = true
+        }else {
+            if(event.target.style.backgroundColor == "yellow" || event.target.style.backgroundColor == "red" ){
+                alert("Rejoue en cliquant sur une case vide")
+                return 
+            }
+            event.target.style.backgroundColor = "yellow"
+            Tour.innerHTML = "Tour du joueur 1"
+            // alert("Tour du joueur 1 !")
+            compteJoueur = false
         }
-        event.target.style.backgroundColor = "red"
-        Tour.innerHTML = "Tour du joueur 2"
-        // alert("Tour du joueur 2 !")
-         compteJoueur = true
-    }else {
-        if(event.target.style.backgroundColor == "yellow" || event.target.style.backgroundColor == "red" ){
-            alert("Rejoue en cliquant sur une case vide")
-            return 
+        if (verifVictoire()){
+            terminer = true
+            if(compteJoueur == true){
+                // alert("Le joueur 1 à gagner !")
+                Tour.innerHTML = "Le joueur 1 a gagné !!"
+                Tour.style.color = "red"
+                var currentScoreJ1 = parseInt (scoreJ1.innerHTML)
+                scoreJ1.innerHTML = currentScoreJ1 + 1
+                setTimeout(resetPlateau,1000)
+                // resetPlateau()
+                return
+            }else{
+                // alert("Le joueur 2 à gagner !")
+                Tour.innerHTML = "Le joueur 2 a gagné !!"
+                Tour.style.color = "yellow"
+                var currentScoreJ2 = parseInt (scoreJ2.innerHTML)
+                scoreJ2.innerHTML = currentScoreJ2 + 1 
+                setTimeout(resetPlateau,1000)
+                // resetPlateau()
+                return    
+            }
         }
-        event.target.style.backgroundColor = "yellow"
-        Tour.innerHTML = "Tour du joueur 1"
-        // alert("Tour du joueur 1 !")
-         compteJoueur = false
     }
-    if (verifVictoire()){
-        if(compteJoueur == true){
-            // alert("Le joueur 1 à gagner !")
-            Tour.innerHTML = "Le joueur 1 a gagné !!"
-            Tour.style.color = "red"
-            var currentScoreJ1 = parseInt (scoreJ1.innerHTML)
-            scoreJ1.innerHTML = currentScoreJ1 + 1
-            setTimeout(resetPlateau,1000)
-            // resetPlateau()
-            return
-        }else{
-            // alert("Le joueur 2 à gagner !")
-            Tour.innerHTML = "Le joueur 2 a gagné !!"
-            Tour.style.color = "yellow"
-            var currentScoreJ2 = parseInt (scoreJ2.innerHTML)
-            scoreJ2.innerHTML = currentScoreJ2 + 1 
-            setTimeout(resetPlateau,1000)
-            // resetPlateau()
-            return    
-        }
-    }
-    
 }
 
 // Fonction pour initialiser le plateau
@@ -132,6 +136,7 @@ function initPlateau() {
 }
 
 function resetPlateau(){
+    terminer = false
     Tour.innerHTML = "Tour du joueur 1"
     Tour.style.color = ""
     compteJoueur = false
@@ -141,10 +146,5 @@ function resetPlateau(){
     initPlateau()
 }
 
-function finPartie(event){
-    if (terminer == true){
-        return
-    }
-}
 // Événement au chargement de la page pour lancer initPlateau
 window.addEventListener('load', initPlateau);
