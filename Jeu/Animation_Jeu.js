@@ -5,7 +5,9 @@ var plateau = [];
 var compteJoueur = false;
 var scoreJ1 = document.getElementById("Score1")
 var scoreJ2 = document.getElementById("Score2")
-alert("Tour du joueur 1 !")
+var Tour = document.getElementById("tourJoueur")
+var currentTour
+// alert("Tour du joueur 1 !")
 
     function verifVictoire() {
         // Vérification horizontale
@@ -67,16 +69,18 @@ function colorCase(event) {
             return 
         }
         event.target.style.backgroundColor = "red"
-        alert("Tour du joueur 2 !")
-        compteJoueur = true
+        Tour.innerHTML = "Tour du joueur 2"
+        // alert("Tour du joueur 2 !")
+         compteJoueur = true
     }else {
         if(event.target.style.backgroundColor == "yellow" || event.target.style.backgroundColor == "red" ){
             alert("Rejoue en cliquant sur une case vide")
             return 
         }
         event.target.style.backgroundColor = "yellow"
-        alert("Tour du joueur 1 !")
-        compteJoueur = false
+        Tour.innerHTML = "Tour du joueur 1"
+        // alert("Tour du joueur 1 !")
+         compteJoueur = false
     }
     if (verifVictoire()){
         if(compteJoueur == true){
@@ -121,6 +125,7 @@ function initPlateau() {
 }
 
 function resetPlateau(){
+    Tour.innerHTML = "Tour du joueur 1"
     compteJoueur = false
     var contenuDiv = document.getElementById('contenu')
     contenuDiv.innerHTML = ""
