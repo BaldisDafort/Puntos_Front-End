@@ -104,7 +104,7 @@ function colorCase(event) {
                 Tour.style.color = "red"
                 var currentScoreJ1 = parseInt (scoreJ1.innerHTML)
                 scoreJ1.innerHTML = currentScoreJ1 + 1
-                setTimeout(resetPlateau,1000)
+                setTimeout(resetPlateau,3000)
                 // resetPlateau()
                 return
             }else{
@@ -113,7 +113,7 @@ function colorCase(event) {
                 Tour.style.color = "yellow"
                 var currentScoreJ2 = parseInt (scoreJ2.innerHTML)
                 scoreJ2.innerHTML = currentScoreJ2 + 1 
-                setTimeout(resetPlateau,1000)
+                setTimeout(resetPlateau,3000)
                 // resetPlateau()
                 return    
             }
@@ -122,7 +122,7 @@ function colorCase(event) {
             terminer = true;
             Tour.innerHTML = "Égalité !";
             Tour.style.color = "gray";
-            setTimeout(resetPlateau, 1000);
+            setTimeout(resetPlateau, 3000);
     }
 }
 }
