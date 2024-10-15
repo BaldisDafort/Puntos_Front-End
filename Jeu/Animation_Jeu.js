@@ -21,7 +21,7 @@ var terminer = false
                     return true;
                 }
             }
-        }
+        } 
     
         // Vérification verticale
         for (var i = 0; i < hauteur - 3; i++) {
@@ -62,6 +62,16 @@ var terminer = false
         return false;
     }    
 
+    function egalite() {
+        for (var i = 0; i < hauteur; i++) {
+            for (var j = 0; j < largeur; j++) {
+                if (plateau[i][j].style.backgroundColor === "") {
+                    return false; 
+                }
+            }
+        }
+        return true; 
+    }
 
 function colorCase(event) {
     if(terminer == true){
@@ -108,7 +118,13 @@ function colorCase(event) {
                 return    
             }
         }
+        if (egalite()) {
+            terminer = true;
+            Tour.innerHTML = "Égalité !";
+            Tour.style.color = "gray";
+            setTimeout(resetPlateau, 1000);
     }
+}
 }
 
 // Fonction pour initialiser le plateau
