@@ -5,6 +5,59 @@ var plateau = [];
 var compteJoueur = false;
 alert("Tour du joueur 1 !")
 
+    function verifVictoire() {
+        // Vérification horizontale
+        for (var i = 0; i < hauteur; i++) {
+            for (var j = 0; j < largeur - 3; j++) {
+                if (plateau[i][j].style.backgroundColor !== "" &&
+                    plateau[i][j].style.backgroundColor === plateau[i][j+1].style.backgroundColor &&
+                    plateau[i][j].style.backgroundColor === plateau[i][j+2].style.backgroundColor &&
+                    plateau[i][j].style.backgroundColor === plateau[i][j+3].style.backgroundColor) {
+                    return true;
+                }
+            }
+        }
+    
+        // Vérification verticale
+        for (var i = 0; i < hauteur - 3; i++) {
+            for (var j = 0; j < largeur; j++) {
+                if (plateau[i][j].style.backgroundColor !== "" &&
+                    plateau[i][j].style.backgroundColor === plateau[i+1][j].style.backgroundColor &&
+                    plateau[i][j].style.backgroundColor === plateau[i+2][j].style.backgroundColor &&
+                    plateau[i][j].style.backgroundColor === plateau[i+3][j].style.backgroundColor) {
+                    return true;
+                }
+            }
+        }
+    
+        // Vérification diagonale (de gauche-bas à droite-haut)
+        for (var i = 3; i < hauteur; i++) {
+            for (var j = 0; j < largeur - 3; j++) {
+                if (plateau[i][j].style.backgroundColor !== "" &&
+                    plateau[i][j].style.backgroundColor === plateau[i-1][j+1].style.backgroundColor &&
+                    plateau[i][j].style.backgroundColor === plateau[i-2][j+2].style.backgroundColor &&
+                    plateau[i][j].style.backgroundColor === plateau[i-3][j+3].style.backgroundColor) {
+                    return true;
+                }
+            }
+        }
+    
+        // Vérification diagonale (de gauche-haut à droite-bas)
+        for (var i = 0; i < hauteur - 3; i++) {
+            for (var j = 0; j < largeur - 3; j++) {
+                if (plateau[i][j].style.backgroundColor !== "" &&
+                    plateau[i][j].style.backgroundColor === plateau[i+1][j+1].style.backgroundColor &&
+                    plateau[i][j].style.backgroundColor === plateau[i+2][j+2].style.backgroundColor &&
+                    plateau[i][j].style.backgroundColor === plateau[i+3][j+3].style.backgroundColor) {
+                    return true;
+                }
+            }
+        }
+    
+        return false;
+    }    
+
+
 function colorCase(event) {
     if(compteJoueur == false) {
         if(event.target.style.backgroundColor == "yellow" || event.target.style.backgroundColor == "red" ){
@@ -23,11 +76,13 @@ function colorCase(event) {
         alert("Tour du joueur 1 !")
         compteJoueur = false
     }
-    // if (event.target.style.backgroundColor === "" || event.target.style.backgroundColor === "green") {
-    //     event.target.style.backgroundColor = "red"
-    // }else if(event.target.style.backgroundColor === "red"){
-    //     event.target.style.backgroundColor = "green"
-    // }
+    if (verifVictoire()){
+        if(compteJoueur == true){
+            alert("Le joueur 2 à gagner !")
+        }else{
+            alert("Le joueur 1 à gagner !")
+        }
+    }
 }
 
 // Fonction pour initialiser le plateau
