@@ -22,3 +22,8 @@ td {
     width: 100vh;
     height: 15vh;
 }
+
+.parent {
+    display: flex;
+    justify-content: space-between;
+}

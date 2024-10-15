@@ -3,6 +3,8 @@ var largeur = 7;
 var hauteur = 6;
 var plateau = [];
 var compteJoueur = false;
+var scoreJ1 = document.getElementById("Score1")
+var scoreJ2 = document.getElementById("Score2")
 alert("Tour du joueur 1 !")
 
     function verifVictoire() {
@@ -79,11 +81,15 @@ function colorCase(event) {
     if (verifVictoire()){
         if(compteJoueur == true){
             alert("Le joueur 1 à gagner !")
-            location.reload()
+            var currentScoreJ1 = parseInt (scoreJ1.innerHTML)
+            scoreJ1.innerHTML = currentScoreJ1 + 1
+            resetPlateau()
             return
         }else{
-            alert("Le joueur 2 à gagner !")  
-            location.reload() 
+            alert("Le joueur 2 à gagner !")
+            var currentScoreJ2 = parseInt (scoreJ2.innerHTML)
+            scoreJ2.innerHTML = currentScoreJ2 + 1 
+            resetPlateau()
             return    
         }
     }
@@ -114,7 +120,13 @@ function initPlateau() {
     contenuDiv.appendChild(tableau);
 }
 
-
+function resetPlateau(){
+    compteJoueur = false
+    var contenuDiv = document.getElementById('contenu')
+    contenuDiv.innerHTML = ""
+    plateau=[]
+    initPlateau()
+}
 
 // Événement au chargement de la page pour lancer initPlateau
 window.addEventListener('load', initPlateau);
