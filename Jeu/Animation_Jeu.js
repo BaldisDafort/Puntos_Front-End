@@ -7,6 +7,7 @@ var scoreJ1 = document.getElementById("Score1")
 var scoreJ2 = document.getElementById("Score2")
 var Tour = document.getElementById("tourJoueur")
 var currentTour
+var terminer = false
 // alert("Tour du joueur 1 !")
 
     function verifVictoire() {
@@ -84,16 +85,22 @@ function colorCase(event) {
     }
     if (verifVictoire()){
         if(compteJoueur == true){
-            alert("Le joueur 1 à gagner !")
+            // alert("Le joueur 1 à gagner !")
+            Tour.innerHTML = "Le joueur 1 a gagné !!"
+            Tour.style.color = "red"
             var currentScoreJ1 = parseInt (scoreJ1.innerHTML)
             scoreJ1.innerHTML = currentScoreJ1 + 1
-            resetPlateau()
+            setTimeout(resetPlateau,1000)
+            // resetPlateau()
             return
         }else{
-            alert("Le joueur 2 à gagner !")
+            // alert("Le joueur 2 à gagner !")
+            Tour.innerHTML = "Le joueur 2 a gagné !!"
+            Tour.style.color = "yellow"
             var currentScoreJ2 = parseInt (scoreJ2.innerHTML)
             scoreJ2.innerHTML = currentScoreJ2 + 1 
-            resetPlateau()
+            setTimeout(resetPlateau,1000)
+            // resetPlateau()
             return    
         }
     }
@@ -126,6 +133,7 @@ function initPlateau() {
 
 function resetPlateau(){
     Tour.innerHTML = "Tour du joueur 1"
+    Tour.style.color = ""
     compteJoueur = false
     var contenuDiv = document.getElementById('contenu')
     contenuDiv.innerHTML = ""
@@ -133,5 +141,10 @@ function resetPlateau(){
     initPlateau()
 }
 
+function finPartie(event){
+    if (terminer == true){
+        return
+    }
+}
 // Événement au chargement de la page pour lancer initPlateau
 window.addEventListener('load', initPlateau);
