@@ -23,7 +23,7 @@ form.addEventListener('submit', function (e) {
 
     // Créer un objet utilisateur
     const user = {
-        username: username,
+        username: test,
         password: password
     };
 
