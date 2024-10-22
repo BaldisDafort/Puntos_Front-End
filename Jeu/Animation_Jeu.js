@@ -78,16 +78,16 @@ function colorCase(event) {
         return
     }else{
         if(compteJoueur == false) {
-            if(event.target.style.backgroundColor == "yellow" || event.target.style.backgroundColor == "red" ){
+            if(event.target.style.backgroundColor == "yellow" || event.target.style.backgroundColor == "blue" ){
                 alert("Rejoue en cliquant sur une case vide")
                 return 
             }
-            event.target.style.backgroundColor = "red"
+            event.target.style.backgroundColor = "blue"
             Tour.innerHTML = "Tour du joueur 2"
             // alert("Tour du joueur 2 !")
             compteJoueur = true
         }else {
-            if(event.target.style.backgroundColor == "yellow" || event.target.style.backgroundColor == "red" ){
+            if(event.target.style.backgroundColor == "yellow" || event.target.style.backgroundColor == "blue" ){
                 alert("Rejoue en cliquant sur une case vide")
                 return 
             }
@@ -101,7 +101,7 @@ function colorCase(event) {
             if(compteJoueur == true){
                 // alert("Le joueur 1 à gagner !")
                 Tour.innerHTML = "Le joueur 1 a gagné !!"
-                Tour.style.color = "red"
+                Tour.style.color = "blue"
                 var currentScoreJ1 = parseInt (scoreJ1.innerHTML)
                 scoreJ1.innerHTML = currentScoreJ1 + 1
                 setTimeout(resetPlateau,3000)
