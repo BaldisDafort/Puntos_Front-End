@@ -26,7 +26,30 @@
 
         <p class="signup-text">Pas encore de compte ? <a href="creation.html">Créer un compte</a></p>
     </main>
+
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="Identification_animation.js"></script>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', async function (event) {
+            event.preventDefault(); // Empêche la soumission du formulaire par défaut
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await axios.post('http://localhost:3000/users/verify', {
+                    username: username,
+                    password: password
+                });
+
+                window.location.href = "../Jeu/jeu.html";
+
+            } catch (error) {
+                alert(error.response.data.message || 'Erreur lors de la connexion');
+            }
+        });
+    </script>
+
 </body>
 </html>
