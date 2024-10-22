@@ -6,12 +6,12 @@
 
 
 table {
+
     border-collapse: separate;
     border: 1px solid black;
     margin: 2% auto;
     background-color: #e53b04;
     border-radius: 3%;
-
 }
 
 
@@ -33,5 +33,6 @@ td {
     background-color: #007bff;
     color: white;
     text-align: center;
+    padding: 20px 0;
     font-size: 18px;
 }
