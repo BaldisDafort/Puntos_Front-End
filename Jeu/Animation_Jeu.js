@@ -2,23 +2,16 @@
 var largeur = 7;
 var hauteur = 6;
 var plateau = [];
+var c1 = "yellow"
+var c2 = "blue"
 var compteJoueur = false;
+var body = document.getElementById("contenu")
 var scoreJ1 = document.getElementById("Score1")
 var scoreJ2 = document.getElementById("Score2")
 var Tour = document.getElementById("tourJoueur")
 var currentTour
 var terminer = false
-var sizeWidht = screen.width;
-var sizeHeight = screen.height;
-var sizeAdapt;
 // alert("Tour du joueur 1 !")
-
-console.log(screen.height);
-console.log(screen.width);
-
-var size = screen.width/7;
-console.log(size);
-
 
     function verifVictoire() {
         // Vérification horizontale
@@ -88,30 +81,33 @@ function colorCase(event) {
         return
     }else{
         if(compteJoueur == false) {
-            if(event.target.style.backgroundColor == "yellow" || event.target.style.backgroundColor == "blue" ){
+            if(event.target.style.backgroundColor == c1 || event.target.style.backgroundColor == c2 ){
                 alert("Rejoue en cliquant sur une case vide")
                 return 
             }
-            event.target.style.backgroundColor = "blue"
+            event.target.style.backgroundColor = c2
             Tour.innerHTML = "Tour du joueur 2"
             // alert("Tour du joueur 2 !")
             compteJoueur = true
+            body.style.backgroundColor = c1
+            
         }else {
-            if(event.target.style.backgroundColor == "yellow" || event.target.style.backgroundColor == "blue" ){
+            if(event.target.style.backgroundColor == c1 || event.target.style.backgroundColor == c2 ){
                 alert("Rejoue en cliquant sur une case vide")
                 return 
             }
-            event.target.style.backgroundColor = "yellow"
+            event.target.style.backgroundColor = c1
             Tour.innerHTML = "Tour du joueur 1"
             // alert("Tour du joueur 1 !")
             compteJoueur = false
+            body.style.backgroundColor = c2
         }
         if (verifVictoire()){
             terminer = true
             if(compteJoueur == true){
                 // alert("Le joueur 1 à gagner !")
                 Tour.innerHTML = "Le joueur 1 a gagné !!"
-                Tour.style.color = "blue"
+                Tour.style.color = c2
                 var currentScoreJ1 = parseInt (scoreJ1.innerHTML)
                 scoreJ1.innerHTML = currentScoreJ1 + 1
                 setTimeout(resetPlateau,3000)
@@ -120,7 +116,7 @@ function colorCase(event) {
             }else{
                 // alert("Le joueur 2 à gagner !")
                 Tour.innerHTML = "Le joueur 2 a gagné !!"
-                Tour.style.color = "yellow"
+                Tour.style.color = c1
                 var currentScoreJ2 = parseInt (scoreJ2.innerHTML)
                 scoreJ2.innerHTML = currentScoreJ2 + 1 
                 setTimeout(resetPlateau,3000)
@@ -150,8 +146,6 @@ function initPlateau() {
             var cellule = document.createElement('td');
 
             cellule.addEventListener('click', colorCase)
-            cellule.style.width = sizeAdapt + "px"
-            cellule.style.height = sizeAdapt + "px"
 
             ligne.appendChild(cellule);
             plateau[i][j] = cellule;
@@ -171,19 +165,9 @@ function resetPlateau(){
     var contenuDiv = document.getElementById('contenu')
     contenuDiv.innerHTML = ""
     plateau=[]
+    body.style.backgroundColor = c1
     initPlateau()
 }
 
-function calcScreen() {
-    sizeAdapt = sizeWidht/largeur
-}
-
 // Événement au chargement de la page pour lancer initPlateau
-window.addEventListener('load', function() {
-    if(this.screen.width < 600){
-        calcScreen();
-    }
-
-    initPlateau();
-});
-
+window.addEventListener('load', initPlateau);
