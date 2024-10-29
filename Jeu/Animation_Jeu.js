@@ -8,7 +8,17 @@ var scoreJ2 = document.getElementById("Score2")
 var Tour = document.getElementById("tourJoueur")
 var currentTour
 var terminer = false
+var sizeWidht = screen.width;
+var sizeHeight = screen.height;
+var sizeAdapt;
 // alert("Tour du joueur 1 !")
+
+console.log(screen.height);
+console.log(screen.width);
+
+var size = screen.width/7;
+console.log(size);
+
 
     function verifVictoire() {
         // Vérification horizontale
@@ -140,6 +150,8 @@ function initPlateau() {
             var cellule = document.createElement('td');
 
             cellule.addEventListener('click', colorCase)
+            cellule.style.width = sizeAdapt + "px"
+            cellule.style.height = sizeAdapt + "px"
 
             ligne.appendChild(cellule);
             plateau[i][j] = cellule;
@@ -162,5 +174,16 @@ function resetPlateau(){
     initPlateau()
 }
 
+function calcScreen() {
+    sizeAdapt = sizeWidht/largeur
+}
+
 // Événement au chargement de la page pour lancer initPlateau
-window.addEventListener('load', initPlateau);
+window.addEventListener('load', function() {
+    if(this.screen.width < 600){
+        calcScreen();
+    }
+
+    initPlateau();
+});
+
