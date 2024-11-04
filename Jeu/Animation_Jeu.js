@@ -5,6 +5,7 @@ var plateau = [];
 var c1 = "yellow"
 var c2 = "blue"
 var compteJoueur = false;
+var html = document.getElement
 var body = document.getElementById("contenu")
 var scoreJ1 = document.getElementById("Score1")
 var scoreJ2 = document.getElementById("Score2")
@@ -160,6 +161,7 @@ function initPlateau() {
 
     // Ajout du tableau à la div
     contenuDiv.appendChild(tableau);
+    body.style.backgroundColor = c2
 }
 
 function resetPlateau(){
@@ -170,7 +172,6 @@ function resetPlateau(){
     var contenuDiv = document.getElementById('contenu')
     contenuDiv.innerHTML = ""
     plateau=[]
-    body.style.backgroundColor = c2
     initPlateau()
 }
 
