@@ -5,6 +5,7 @@ var plateau = [];
 var c1 = "yellow"
 var c2 = "blue"
 var compteJoueur = false;
+var html = document.getElement;
 var body = document.getElementById("contenu")
 var scoreJ1 = document.getElementById("Score1")
 var scoreJ2 = document.getElementById("Score2")
@@ -177,6 +178,7 @@ function resetPlateau(){
 // Événement au chargement de la page pour lancer initPlateau
 function calcScreen() {
     sizeAdapt = sizeWidht/largeur
+    html.style.backgroundColor = "black"
 }
 
 // Événement au chargement de la page pour lancer initPlateau
