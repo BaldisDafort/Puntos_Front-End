@@ -178,6 +178,7 @@ function resetPlateau(){
 // Événement au chargement de la page pour lancer initPlateau
 function calcScreen() {
     sizeAdapt = sizeWidht/largeur
+    html.style.backgroundColor = "black"
 }
 
 // Événement au chargement de la page pour lancer initPlateau
