@@ -37,7 +37,16 @@ td {
     color: white;
     text-align: center;
     font-size: 18px;
+    font-family: "staatliches";
 }
+
+.staatliches-regular {
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
 
 /* @media only screen and (max-width : 600px) {
 
