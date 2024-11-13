@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+h1 {
+    font-family: "Sonsie One", system-ui;
+    letter-spacing: 10px;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -42,10 +47,12 @@ main {
 form {
     display: flex;
     flex-direction: column;
+    font-family: "Sonsie One", system-ui;
 }
 
 label {
     margin: 10px 0 5px;
+    font-family: "Sonsie One", system-ui;
 }
 
 input {
@@ -53,6 +60,7 @@ input {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 15px;
+    font-family: "Sonsie One", system-ui;
 }
 
 button {
@@ -62,10 +70,12 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: "Sonsie One", system-ui;
 }
 
 button:hover {
     background-color: #0056b3;
+    font-family: "Sonsie One", system-ui;
 }
 
 .signup-text {
