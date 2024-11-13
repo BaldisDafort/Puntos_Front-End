@@ -18,7 +18,7 @@ header {
     text-align: center;
     padding: 20px 0;
     font-size: 24px;
-    font-family: "Staatliches";
+    font-family: "Sonsie One", system-ui;
 }
 
 .parent {
@@ -26,7 +26,7 @@ header {
     justify-content: center;
     height: 73%;
     width: 100%;
-    font-family: "Staatliches";
+    font-family: "Staatliches", sans-serif;
 }
 
 body {

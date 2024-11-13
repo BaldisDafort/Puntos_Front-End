@@ -18,7 +18,7 @@ header {
     text-align: center;
     padding: 20px 0;
     font-size: 24px;
-    font-family: Arial, sans-serif;
+    font-family: "Sonsie One", system-ui;
 }
 
 .parent {
@@ -44,9 +44,10 @@ button {
     cursor: pointer;
     width: 85%;
     height: 100%;
+    font-family: "Sonsie One", system-ui;
 }
 
-.butt {
+.butte {
     display: flex;
     justify-content: center;
 
@@ -87,4 +88,44 @@ a {
 
 .rouge:hover {
     background-color: rgba(250, 0, 0, 0.8);
+}
+
+.vert {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 85%;
+    height: 100%;
+}
+
+.vert:hover {
+    background-color: rgba(0, 128, 0, 0.8);
+}
+
+.bleu {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 85%;
+    height: 100%;
+}
+
+.bleu:hover {
+    background-color: rgba(0, 0, 255, 0.8);
+}
+
+.retour {
+    width: 50%;
 }
