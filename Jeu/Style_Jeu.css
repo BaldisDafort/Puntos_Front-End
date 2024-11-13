@@ -17,6 +17,14 @@ table {
 
 }
 
+:root {
+    --hover-color: yellow; 
+}
+
+td:hover {
+    background-color: var(--hover-color);
+}
+
 
 td {
     border: 10px solid black;

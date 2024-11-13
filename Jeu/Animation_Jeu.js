@@ -2,8 +2,9 @@
 var largeur = 7;
 var hauteur = 6;
 var plateau = [];
-var c1 = "yellow"
-var c2 = "blue"
+var c2 = "yellow"
+var c1 = "blue"
+const tds = document.querySelectorAll('td');
 var compteJoueur = false;
 var html = document.getElement
 var body = document.getElementById("contenu")
@@ -94,6 +95,8 @@ function colorCase(event) {
             // alert("Tour du joueur 2 !")
             compteJoueur = true
             body.style.backgroundColor = c1
+            document.documentElement.style.setProperty('--hover-color', c1);
+
             
         }else {
             if(event.target.style.backgroundColor == c1 || event.target.style.backgroundColor == c2 ){
@@ -105,6 +108,7 @@ function colorCase(event) {
             // alert("Tour du joueur 1 !")
             compteJoueur = false
             body.style.backgroundColor = c2
+            document.documentElement.style.setProperty('--hover-color', c2);
         }
         if (verifVictoire()){
             terminer = true
