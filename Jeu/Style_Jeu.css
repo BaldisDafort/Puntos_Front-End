@@ -37,7 +37,12 @@ td {
     color: white;
     text-align: center;
     font-size: 18px;
+    font-family: "Sonsie One", system-ui;
 }
+
+
+  
+
 
 /* @media only screen and (max-width : 600px) {
 

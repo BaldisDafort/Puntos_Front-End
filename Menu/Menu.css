@@ -18,7 +18,7 @@ header {
     text-align: center;
     padding: 20px 0;
     font-size: 24px;
-    font-family: Arial, sans-serif;
+    font-family: "Staatliches";
 }
 
 .parent {
@@ -26,6 +26,7 @@ header {
     justify-content: center;
     height: 73%;
     width: 100%;
+    font-family: "Staatliches";
 }
 
 body {
@@ -44,6 +45,7 @@ button {
     cursor: pointer;
     width: 85%;
     height: 100%;
+    font-family: "Sonsie One", system-ui;
 }
 
 button:hover {
