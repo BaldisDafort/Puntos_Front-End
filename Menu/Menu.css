@@ -27,6 +27,7 @@ header {
     align-self: center;
     padding-top: -1px;
     padding-bottom: -1px;
+    margin-top: 10px;
 }
 
 .nomJoueurHeader {
@@ -35,9 +36,23 @@ header {
     font-size: 12px;
     margin-top: 1px;
     margin-bottom: 1px;
-    padding-top: -5px;
-    padding-bottom: -5px;
 }
+
+.logoEtNomJoueur {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.logoJoueur {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+
 
 .parent {
     display: flex;
