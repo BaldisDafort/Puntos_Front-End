@@ -5,7 +5,7 @@ var plateau = [];
 var c2 = "yellow"
 var c1 = "blue"
 const tds = document.querySelectorAll('td');
-var compteJoueur = false;
+var compteJoueur = false; // false = joueur 1; true = joueur 2
 var html = document.getElement
 var body = document.getElementById("contenu")
 var scoreJ1 = document.getElementById("Score1")
@@ -91,7 +91,7 @@ function colorCase(event) {
                 return 
             }
             event.target.style.backgroundColor = c2
-            Tour.innerHTML = "Tour du joueur 2"
+            Tour.innerHTML = "Tour de invité"
             // alert("Tour du joueur 2 !")
             compteJoueur = true
             body.style.backgroundColor = c1
@@ -170,6 +170,7 @@ function initPlateau() {
     body.style.backgroundColor = c2
 }
 
+// fonction servant a reset le jeux en fin de partie
 function resetPlateau(){
     terminer = false
     Tour.innerHTML = "Tour du joueur 1"
@@ -178,6 +179,7 @@ function resetPlateau(){
     var contenuDiv = document.getElementById('contenu')
     contenuDiv.innerHTML = ""
     plateau=[]
+    document.documentElement.style.setProperty('--hover-color', c2);
     initPlateau()
 }
 
