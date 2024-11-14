@@ -1,24 +1,24 @@
 var couleurJ1 ="blue"
-var bouton = document.querySelectorAll("button")
+var boutons = document.querySelectorAll("button")
 var Head = document.querySelectorAll("header")
-var deconnexion = document.getElementById("Retour")
+var retour = document.getElementById("Retour")
 var rouge = document.getElementById("red");
 var vert = document.getElementById("green");
 var bleu = document.getElementById("blue");
 
-deconnexion.addEventListener("click", () => {
+retour.addEventListener("click", () => {
     window.location.href = "../Menu/Menu.html"
 })
 
 function color () {
-    bouton.forEach(boutons => {
-        boutons.style.backgroundColor = couleurJ1
-    })
+    // boutons.forEach(bouton => {
+    //     bouton.style.backgroundColor = couleurJ1
+    // })
 
     Head.forEach(Heads => {
-        Heads.style.backgroundColor = couleurJ1
+        Heads.style.backgroundColor = couleurJ1;
     })
-    
+    retour.style.backgroundColor = couleurJ1;
 }
 
 rouge.addEventListener("click", () => {
