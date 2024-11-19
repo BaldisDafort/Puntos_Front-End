@@ -45,3 +45,17 @@ td {
     font-family: "Sonsie One", system-ui;
 
 }
+
+p {
+    font-family: "Sonsie One", system-ui;
+}
+
+.header {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    font-family: "Sonsie One", system-ui;
+}
