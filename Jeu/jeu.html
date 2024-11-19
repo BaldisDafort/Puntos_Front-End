@@ -12,8 +12,28 @@
     <link rel="icon" href="Images\Ico.png">
 </head>
 <body>
-    <div class="parent">
-        <div><p>Joueur 1 :</p>
+    <header>
+        <div class="joueur1">
+            <div class="logoEtNomJoueur">
+                <img class="logoJoueur" src="../Assets/Logo_Puntos.png">
+                <p class="nomJoueur">Nom Joueur</p>
+            </div>
+            <p id="Score1" class="scoreJoueur1">0</p>
+        </div>
+        <div class="titrePuntos">
+            <h1 class="Puntos">Puntos</h1>
+            <p id="tourJoueur" class="puntosTourJouueur">Tour du joueur 1</p>
+        </div>
+        <div class="invite">
+            <p class="texteInvite">invité</p>
+            <p id="Score2" class="scoreJoueur2">0</p>
+        </div>
+    </header>
+
+
+    <!-- <header class="parent">
+        <div>
+            <p>Joueur 1 :</p>
             <p id="Score1">0</p>
         </div>
         <div><h1>Puntos !</h1>
@@ -21,7 +41,7 @@
         </div>
         <div><p>Invité :</p>
             <p id="Score2">0</p>
-        </div>
+    </header> -->
     </div>
     <div id="contenu"></div>
     <script src="Jeu.js"></script>
