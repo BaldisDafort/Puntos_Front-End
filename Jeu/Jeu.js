@@ -124,7 +124,7 @@ function colorCase(event) {
                 return
             }else{
                 // alert("Le joueur 2 à gagner !")
-                Tour.innerHTML = "Le joueur 2 a gagné !!"
+                Tour.innerHTML = "Invité a gagné !!"
                 Tour.style.color = c1
                 document.documentElement.style.setProperty('--hover-color', c2);
                 var currentScoreJ2 = parseInt (scoreJ2.innerHTML)
