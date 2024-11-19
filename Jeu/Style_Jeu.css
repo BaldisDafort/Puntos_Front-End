@@ -37,7 +37,92 @@ td {
     width: 10vh ;
 }
 
-.parent {
+header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    font-size: 24px;
+    font-family: "Sonsie One", system-ui;
+}
+
+.joueur1 {
+    width: 20%;
+}
+
+.titrePuntos {
+    display: flex;
+    align-self: center;;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.Puntos {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.invite {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 20px;
+    right: 20px;
+}
+
+.texteInvite {
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.scoreJoueur2 {
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.puntosTourJouueur {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.logoEtNomJoueur {
+    display: flex;
+    flex-direction: row;
+}
+
+.nomJoueur {
+    display: flex;
+    align-self: flex-start;
+    font-size: 15px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.scoreJoueur1 {
+    margin-top: 0px;
+    margin-left: 30px;
+    font-size: 15px;
+}
+
+.logoJoueur {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+
+
+
+/* .parent {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -46,7 +131,7 @@ td {
     text-align: center;
     font-size: 18px;
     font-family: "Sonsie One", system-ui;
-}
+} */
 
 p {
     font-family: "Sonsie One", system-ui;
