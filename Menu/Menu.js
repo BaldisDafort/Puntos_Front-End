@@ -7,5 +7,5 @@ deconnexion.addEventListener("click", () => {
 var parametre = document.getElementById("param");
 
 parametre.addEventListener("click", () => {
-    window.location.href = "../Menu/Paramètres.html"
+    window.location.href = "../Menu/Parametres.html"
 })

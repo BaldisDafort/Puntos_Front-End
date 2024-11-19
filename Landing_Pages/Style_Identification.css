@@ -6,7 +6,6 @@
 
 h1 {
     font-family: "Sonsie One", system-ui;
-    letter-spacing: 10px;
 }
 
 body {
@@ -19,14 +18,6 @@ body {
     height: 100vh;
 }
 
-header {
-    width: 100%;
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 24px;
-}
 
 main {
     display: flex;
@@ -60,21 +51,6 @@ input {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 15px;
-    font-family: "Sonsie One", system-ui;
-}
-
-button {
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: "Sonsie One", system-ui;
-}
-
-button:hover {
-    background-color: #0056b3;
     font-family: "Sonsie One", system-ui;
 }
 

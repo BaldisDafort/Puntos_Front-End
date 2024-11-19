@@ -1,0 +1,30 @@
+header {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    font-family: "Sonsie One", system-ui;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 85%;
+    height: 100%;
+    font-family: "Sonsie One", system-ui;
+}
+
+button:hover {
+    background-color: #0056b3;
+    font-family: "Sonsie One", system-ui;
+}
+

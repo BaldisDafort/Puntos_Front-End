@@ -11,16 +11,6 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-header {
-    width: 100%;
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 24px;
-    font-family: "Sonsie One", system-ui;
-}
-
 .parent {
     display: flex;
     justify-content: center;
@@ -30,21 +20,6 @@ header {
 
 body {
     background-color: #f4f4f4;
-}
-
-button {
-    display: flex;
-    justify-content: center;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 85%;
-    height: 100%;
-    font-family: "Sonsie One", system-ui;
 }
 
 .butte {
