@@ -2,8 +2,8 @@
 var largeur = 7;
 var hauteur = 6;
 var plateau = [];
-var c2 = "yellow"
-var c1 = "blue"
+var c1 = "yellow"
+var c2 = "blue"
 const tds = document.querySelectorAll('td');
 var compteJoueur = false; // false = joueur 1; true = joueur 2
 var html = document.getElement
@@ -197,3 +197,4 @@ window.addEventListener('load', function() {
 
     initPlateau();
 });
+

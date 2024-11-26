@@ -18,7 +18,7 @@ table {
 }
 
 :root {
-    --hover-color: yellow; 
+    --hover-color: blue; 
 }
 
 td:hover {
