@@ -1,5 +1,16 @@
 {
   "dependencies": {
+    "@sentry/browser": "^8.40.0",
+    "@sentry/cli": "^2.39.0",
+    "@sentry/tracing": "^7.114.0",
     "axios": "^1.7.7"
+  },
+  "scripts": {
+    "build": "npx webpack --entry ./Jeu/Jeu.js --output-path ./dist --mode production",
+    "sentry:sourcemaps": "sentry-cli sourcemaps inject --org maestris --project javascript ./jeu/jeu.js && sentry-cli sourcemaps upload --org maestris --project javascript ./jeu/jeu.js"
+  },
+  "devDependencies": {
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
   }
 }
