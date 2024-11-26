@@ -39,5 +39,3 @@ bleu.addEventListener("click", () => {
 //     var Header = document.getElementById("head")
 //     Header.style.backgroundColor = "red";
 // })
-
-console.log(couleurJ1)

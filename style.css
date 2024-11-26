@@ -2,7 +2,7 @@ header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: #007bff;
+    background-color: blue;
     color: white;
     padding: 20px 0;
     font-size: 24px;
@@ -15,7 +15,7 @@ button {
     justify-content: center;
     padding-top: 5%;
     padding-bottom: 5%;
-    background-color: #007bff;
+    background-color: blue;
     color: white;
     border: none;
     border-radius: 5px;
@@ -25,8 +25,4 @@ button {
     font-family: "Sonsie One", system-ui;
 }
 
-button:hover {
-    background-color: #0056b3;
-    font-family: "Sonsie One", system-ui;
-}
 

@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
+        <header id="header">
             <div class="logoEtNomJoueur">
                 <img class="logoJoueur" src="../Assets/Logo_Puntos.png">
                 <p class="nomJoueurHeader">Nom Joueur</p>
@@ -19,13 +19,13 @@
         <div class="parent">
             <div class="bloc_menu">
                 <div class="butte">
-                    <button id="red" class="rouge">Rouge</button>
+                    <button id="red" class="color-btn" data-color="#ff0000">Rouge</button>
                 </div>
                 <div class="butte">
-                    <button id="green" class="vert">Vert</button>
+                    <button id="green" class="color-btn" data-color="#008000">Vert</button>
                 </div>
                 <div class="butte">
-                    <button id="blue" class="bleu">Bleu</button>
+                    <button id="blue" class="color-btn" data-color="#0000ff">Bleu</button>
                 </div>
                 <div class="butte">
                     <button id="Retour" class="retour">Retour</button>
@@ -33,5 +33,7 @@
             </div>
         </div>
         <script src="Parametres.js"></script>
+        <script src="../global.js"></script>
+
     </body>
 </html>
