@@ -1,3 +1,19 @@
+// import * as Sentry from "@sentry/browser"
+Sentry.init({
+    dsn: "https://2cba841176a53feb0b4a468569383c99@o4508363354603520.ingest.de.sentry.io/4508363358994512",
+    integrations: [
+        Sentry.browserTracingIntegration(),
+        Sentry.replayIntegration(),
+    ],
+    // Tracing
+    tracesSampleRate: 1.0, //  Capture 100% of the transactions
+    // Set 'tracePropagationTargets' to control for which URLs distributed tracing should be enabled
+    tracePropagationTargets: ["localhost", /^https:\/\/yourserver\.io\/api/],
+    // Session Replay
+    replaysSessionSampleRate: 0.1, // This sets the sample rate at 10%. You may want to change it to 100% while in development and then sample at a lower rate in production.
+    replaysOnErrorSampleRate: 1.0, // If you're not already sampling the entire session, change the sample rate to 100% when sampling sessions where errors occur.
+  });
+
 // Déclaration des variables
 var largeur = 7;
 var hauteur = 6;
@@ -16,7 +32,7 @@ var sizeHeight = screen.height;
 var sizeAdapt;
 var currentTour
 var terminer = false
-// alert("Tour du joueur 1 !")
+// alert("Tour du joueur 1 !")s
 
     function verifVictoire() {
         // Vérification horizontale
@@ -145,6 +161,7 @@ function colorCase(event) {
 
 // Fonction pour initialiser le plateau
 function initPlateau() {
+    
     var contenuDiv = document.getElementById('contenu');
     var tableau = document.createElement('table');
 
