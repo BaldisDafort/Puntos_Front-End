@@ -130,8 +130,8 @@ function colorCase(event) {
             terminer = true
             if(compteJoueur == true){
                 confetti({
-                    particleCount: 2000,
-                    spread: 200,
+                    particleCount: 1000,
+                    spread: 1000,
                     origin: { x: 0.5, y: 0.5 }
                   });
                 Tour.innerHTML = "Le joueur 1 a gagné !!"
@@ -143,8 +143,8 @@ function colorCase(event) {
                 return
             }else{
                 confetti({
-                    particleCount: 2000,
-                    spread: 200,
+                    particleCount: 1000,
+                    spread: 1000,
                     origin: { x: 0.5, y: 0.5 }
                   });
                 Tour.innerHTML = "Invité a gagné !!"
