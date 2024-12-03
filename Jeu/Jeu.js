@@ -129,17 +129,24 @@ function colorCase(event) {
         if (verifVictoire()){
             terminer = true
             if(compteJoueur == true){
-                // alert("Le joueur 1 à gagner !")
+                confetti({
+                    particleCount: 2000,
+                    spread: 200,
+                    origin: { x: 0.5, y: 0.5 }
+                  });
                 Tour.innerHTML = "Le joueur 1 a gagné !!"
                 Tour.style.color = c2
                 document.documentElement.style.setProperty('--hover-color', c2);
                 var currentScoreJ1 = parseInt (scoreJ1.innerHTML)
                 scoreJ1.innerHTML = currentScoreJ1 + 1
                 setTimeout(resetPlateau,3000)
-                // resetPlateau()
                 return
             }else{
-                // alert("Le joueur 2 à gagner !")
+                confetti({
+                    particleCount: 2000,
+                    spread: 200,
+                    origin: { x: 0.5, y: 0.5 }
+                  });
                 Tour.innerHTML = "Invité a gagné !!"
                 Tour.style.color = c1
                 document.documentElement.style.setProperty('--hover-color', c2);
@@ -198,6 +205,14 @@ function resetPlateau(){
     plateau=[]
     document.documentElement.style.setProperty('--hover-color', c2);
     initPlateau()
+}
+
+function launchConfetti() {
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+    });
 }
 
 // Événement au chargement de la page pour lancer initPlateau
