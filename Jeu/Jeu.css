@@ -35,6 +35,7 @@ td {
 
 .joueur1 {
     width: 20%;
+    
 }
 
 .titrePuntos {
@@ -89,9 +90,12 @@ td {
 }
 
 .scoreJoueur1 {
-    margin-top: 0px;
-    margin-left: 30px;
     font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    align-items:center;
+    padding-left: 30%;
 }
 
 .logoJoueur {
