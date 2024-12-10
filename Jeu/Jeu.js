@@ -135,7 +135,6 @@ function colorCase(event) {
                     origin: { x: 0.5, y: 0.5 }
                   });
                 Tour.innerHTML = "Le joueur 1 a gagné !!"
-                Tour.style.color = c2
                 document.documentElement.style.setProperty('--hover-color', c2);
                 var currentScoreJ1 = parseInt (scoreJ1.innerHTML)
                 scoreJ1.innerHTML = currentScoreJ1 + 1
@@ -148,7 +147,6 @@ function colorCase(event) {
                     origin: { x: 0.5, y: 0.5 }
                   });
                 Tour.innerHTML = "Invité a gagné !!"
-                Tour.style.color = c1
                 document.documentElement.style.setProperty('--hover-color', c2);
                 var currentScoreJ2 = parseInt (scoreJ2.innerHTML)
                 scoreJ2.innerHTML = currentScoreJ2 + 1 
