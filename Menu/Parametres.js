@@ -10,32 +10,28 @@ retour.addEventListener("click", () => {
     window.location.href = "../Menu/Menu.html"
 })
 
-function color () {
-    // boutons.forEach(bouton => {
-    //     bouton.style.backgroundColor = couleurJ1
-    // })
+function color (color) {
 
-    Head.forEach(Heads => {
-        Heads.style.backgroundColor = couleurJ1;
-    })
-    retour.style.backgroundColor = couleurJ1;
-}
+    localStorage.setItem('selected-color', color);
+    console.log("couleur ", color, " enregistrée dans local storage");
+    
+
+    if(color != 'red' && color != 'green' && color != 'blue') {
+        console.error("la couleur n'existe pas dans les variables CSS");
+    }
+        document.documentElement.style.setProperty('--selected-color', `var(--${color}-color)`);
+        document.documentElement.style.setProperty('--selected-color-transparent', `var(--${color}-color-transparent)`);
+
+    }
 
 rouge.addEventListener("click", () => {
-    couleurJ1 = "red"
-    color();
+    color('red');
 })
 
 vert.addEventListener("click", () => {
-    couleurJ1 = "green"
-    color();
+    color('green');
 })
 
 bleu.addEventListener("click", () => {
-    couleurJ1 = "blue"
-    color();
+    color('blue');
 })
-// rouge.addEventListener("click", () => {
-//     var Header = document.getElementById("head")
-//     Header.style.backgroundColor = "red";
-// })

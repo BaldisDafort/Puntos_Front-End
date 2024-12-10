@@ -52,7 +52,7 @@ a {
     justify-content: center;
     padding-top: 5%;
     padding-bottom: 5%;
-    background-color: #ff0000;
+    background-color: var(--red-color);
     color: white;
     border: none;
     border-radius: 5px;
@@ -62,7 +62,7 @@ a {
 }
 
 .rouge:hover {
-    background-color: rgba(250, 0, 0, 0.8);
+    background-color: var(--red-color-transparent);
 }
 
 .vert {
@@ -70,7 +70,7 @@ a {
     justify-content: center;
     padding-top: 5%;
     padding-bottom: 5%;
-    background-color: #008000;
+    background-color: var(--green-color);
     color: white;
     border: none;
     border-radius: 5px;
@@ -80,7 +80,7 @@ a {
 }
 
 .vert:hover {
-    background-color: rgba(0, 128, 0, 0.8);
+    background-color: var(--green-color-transparent);
 }
 
 .bleu {
@@ -88,7 +88,7 @@ a {
     justify-content: center;
     padding-top: 5%;
     padding-bottom: 5%;
-    background-color: #0000ff;
+    background-color: var(--blue-color);
     color: white;
     border: none;
     border-radius: 5px;
@@ -98,11 +98,12 @@ a {
 }
 
 .bleu:hover {
-    background-color: rgba(0, 0, 255, 0.8);
+    background-color: var(--blue-color-transparent);
 }
 
 .retour {
     width: 50%;
+    background-color: var(--selected-color);
 }
 
 .titrePuntos {
