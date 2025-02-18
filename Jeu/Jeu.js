@@ -34,8 +34,10 @@ var currentTour
 var terminer = false
 // alert("Tour du joueur 1 !")s
 
-    function verifVictoire() {
+    // function verifVictoire() {
+
         // Vérification horizontale
+    function verifHorizontale() {
         for (var i = 0; i < hauteur; i++) {
             for (var j = 0; j < largeur - 3; j++) {
                 if (plateau[i][j].style.backgroundColor !== "" &&
@@ -45,9 +47,12 @@ var terminer = false
                     return true;
                 }
             }
-        } 
+        }
+        return false;  
+    }
     
         // Vérification verticale
+    function verifVerticale() {
         for (var i = 0; i < hauteur - 3; i++) {
             for (var j = 0; j < largeur; j++) {
                 if (plateau[i][j].style.backgroundColor !== "" &&
@@ -58,8 +63,11 @@ var terminer = false
                 }
             }
         }
+        return false;
+    }
     
         // Vérification diagonale (de gauche-bas à droite-haut)
+    function verifDiagonaleB() {
         for (var i = 3; i < hauteur; i++) {
             for (var j = 0; j < largeur - 3; j++) {
                 if (plateau[i][j].style.backgroundColor !== "" &&
@@ -70,8 +78,11 @@ var terminer = false
                 }
             }
         }
+        return false;
+    }
     
         // Vérification diagonale (de gauche-haut à droite-bas)
+    function verifDiagonaleH(){
         for (var i = 0; i < hauteur - 3; i++) {
             for (var j = 0; j < largeur - 3; j++) {
                 if (plateau[i][j].style.backgroundColor !== "" &&
@@ -82,9 +93,8 @@ var terminer = false
                 }
             }
         }
-    
         return false;
-    }    
+    }
 
     function egalite() {
         for (var i = 0; i < hauteur; i++) {
@@ -126,7 +136,7 @@ function colorCase(event) {
             body.style.backgroundColor = c2
             document.documentElement.style.setProperty('--hover-color', c2);
         }
-        if (verifVictoire()){
+        if (verifDiagonaleB() || verifDiagonaleH() || verifHorizontale() || verifVerticale()){
             terminer = true
             if(compteJoueur == true){
                 confetti({
