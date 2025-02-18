@@ -33,18 +33,6 @@ td {
     width: 10vh ;
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-    background-color: #007bff;
-    color: white;
-    padding: 20px 0;
-    font-size: 24px;
-    font-family: "Sonsie One", system-ui;
-}
-
 .joueur1 {
     width: 20%;
 }

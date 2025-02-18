@@ -1,8 +1,19 @@
+:root {
+    --green-color: #008000;
+    --green-color-transparent: rgba(0, 128, 0, 0.8);
+    --red-color: #ff0000;
+    --red-color-transparent: rgba(255, 0, 0, 0.8);
+    --blue-color: #0000ff;
+    --blue-color-transparent: rgba(0, 0, 255, 0.8);
+    --selected-color: var(--blue-color);
+    --selected-color-transparent: var(--blue-color-transparent);
+}
+
 header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: blue;
+    background-color: var(--selected-color);
     color: white;
     padding: 20px 0;
     font-size: 24px;
@@ -15,7 +26,7 @@ button {
     justify-content: center;
     padding-top: 5%;
     padding-bottom: 5%;
-    background-color: blue;
+    background-color: var(--selected-color);
     color: white;
     border: none;
     border-radius: 5px;
@@ -25,4 +36,7 @@ button {
     font-family: "Sonsie One", system-ui;
 }
 
+button:hover {
+    background-color: var(--selected-color-transparent);
+}
 
