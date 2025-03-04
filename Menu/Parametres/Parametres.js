@@ -7,7 +7,7 @@ var vert = document.getElementById("green");
 var bleu = document.getElementById("blue");
 
 retour.addEventListener("click", () => {
-    window.location.href = "../Menu/Menu.html"
+    window.location.href = "../Menu.html"
 })
 
 function color (color) {

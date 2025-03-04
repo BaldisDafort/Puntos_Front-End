@@ -1,0 +1,67 @@
+.bloc_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7.5%;
+    background-color: white;
+    height: 80%;
+    width: 25%;
+    margin-top: 5%;
+    border-radius: 5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.titrePuntos {
+    display: flex;
+    align-self: center;
+    padding-top: -1px;
+    padding-bottom: -1px;
+    margin-top: 10px;
+}
+
+.nomJoueurHeader {
+    display: flex;
+    align-self: flex-start;
+    font-size: 12px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.logoEtNomJoueur {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.logoJoueur {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+
+
+.parent {
+    display: flex;
+    justify-content: center;
+    height: 73%;
+    width: 100%;
+    font-family: "Staatliches", sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.butt {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
