@@ -70,7 +70,7 @@ a {
 p {
     font-size: 20px;
     font-family: "Sonsie One", sans-serif;
-    color: #007bff;
+    color: white;
     text-align: center;
 }
 
@@ -81,7 +81,7 @@ input {
 label {
     font-size: 20px;
     font-family: "Sonsie One", sans-serif;
-    color: #007bff;
+    color: var(--blue-color);
     text-align: center;
 }
 
@@ -101,8 +101,14 @@ form {
 }
 
 .borderBot {
-    border-bottom: #007bff solid 2px;
-    margin-bottom: 10%;
+    background-color: var(--blue-color);
+    margin-bottom: 10%;;
+    height: 100%;
+    border-radius: 5%;;
+}
+
+.nomJoueurStats {
+    margin-top: 15%;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
