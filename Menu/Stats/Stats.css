@@ -101,6 +101,7 @@ form {
 
 .borderBot {
     border-bottom: #007bff solid 2px;
+    margin-bottom: 10%;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
