@@ -30,44 +30,14 @@
                 <label for="check-password">Confirmer le mot de passe:</label>
                 <input type="password" id="check-password" name="check-password" required>
 
-                <button type="submit">Creer le compte</button>
+                <button type="submit">Créer le compte</button>
             </form>
         </div>
-        <p class="signup-text">Vous avez deja un compte ? <a href="index.html">Connectez-vous</a></p>
+        <p class="signup-text">Vous avez déjà un compte ? <a href="index.html">Connectez-vous</a></p>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-    <script>
-
-        document.getElementById('auth-form').addEventListener('submit', async function (event) {
-            event.preventDefault(); // Empêche la soumission du formulaire par défaut
-            
-            const email = document.getElementById('email').value;
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const check_password = document.getElementById('check-password').value;
-
-            if (password == check_password) {
-                try {
-                    const response = await axios.post('http://localhost:3000/users/add', {
-                        email: email,
-                        username: username,
-                        password: password
-                    });
-                    console.log(response);
-                    
-                    window.location.href = "./Index.html";
-                } catch (error) {
-                    alert(error.message || 'Erreur lors de l\'inscription');
-                }   
-            }
-
-            else{
-                alert('les mots de passes ne sont pas identiques');
-            }
-        });
-
-    </script>
+    <script src="../common/api.js"></script>
+    <script src="creation.js"></script>
 </body>
 </html>

@@ -1,15 +1,26 @@
-import axios from 'axios';
 
-// Ajouter un utilisateur
-const newUser = {
-  name: 'John Doe',
-  email: 'johndoe@example.com'
-};
+document.addEventListener('DOMContentLoaded', function () {
+  const authForm = document.getElementById('auth-form');
+  if (authForm) {
+      authForm.addEventListener('submit', async function (event) {
+          event.preventDefault();
+          
+          const email = document.getElementById('email').value;
+          const username = document.getElementById('username').value;
+          const password = document.getElementById('password').value;
+          const checkPassword = document.getElementById('check-password').value;
 
-axios.post('http://localhost:3000/users', newUser)
-  .then(response => {
-    console.log(response.data); // Affichez le succès de l'ajout
-  })
-  .catch(error => {
-    console.error('Erreur lors de l\'ajout de l\'utilisateur', error);
-  });
+          if (password !== checkPassword) {
+              alert('Les mots de passe ne sont pas identiques');
+              return;
+          }
+
+          try {
+              await addUser(email, username, password);
+              window.location.href = "./index.html";
+          } catch (error) {
+              alert(error.response?.data || 'Erreur lors de l\'inscription');
+          }
+      });
+  }
+});
