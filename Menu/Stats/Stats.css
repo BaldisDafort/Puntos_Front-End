@@ -59,7 +59,7 @@ body {
 .butt {
     display: flex;
     justify-content: center;
-    
+
 }
 
 a {
@@ -103,6 +103,11 @@ form {
     border-bottom: #007bff solid 2px;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 /* table {
     margin-bottom: 25%;
 }
