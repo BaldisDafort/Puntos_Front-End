@@ -49,7 +49,7 @@
     justify-content: center;
     height: 73%;
     width: 100%;
-    font-family: "Staatliches", sans-serif;
+    font-family: "Sonsie One", sans-serif;
 }
 
 body {
@@ -59,7 +59,7 @@ body {
 .butt {
     display: flex;
     justify-content: center;
-    
+
 }
 
 a {
@@ -69,7 +69,7 @@ a {
 
 p {
     font-size: 20px;
-    font-family: 'Sonsie One', sans-serif;
+    font-family: "Staatliches", sans-serif;
     color: #007bff;
     text-align: center;
 }
@@ -80,7 +80,7 @@ input {
 
 label {
     font-size: 20px;
-    font-family: 'Sonsie One', sans-serif;
+    font-family: "Staatliches", sans-serif;
     color: #007bff;
     text-align: center;
 }
@@ -91,30 +91,22 @@ form {
 }
 .inputNumber {
     display: flex;
-    margin-left: 30%;
+    margin-left: 5%;
 }
 
 .formpartie {
     display: flex;
     justify-content: center;
+    margin-left: 2%;
 }
 
 .borderBot {
     border-bottom: #007bff solid 2px;
+    margin-bottom: 10%;
 }
 
-/* table {
-    margin-bottom: 25%;
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
-
-
-
-.tableau {
-    display: flex;
-    justify-content: center;
-    margin-top: 5%;
-}
-
-.border {
-    border-left: solid #007bff 2px;
-} */
