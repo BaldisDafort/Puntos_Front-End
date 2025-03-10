@@ -109,18 +109,3 @@ input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-/* table {
-    margin-bottom: 25%;
-}
-
-
-
-.tableau {
-    display: flex;
-    justify-content: center;
-    margin-top: 5%;
-}
-
-.border {
-    border-left: solid #007bff 2px;
-} */
