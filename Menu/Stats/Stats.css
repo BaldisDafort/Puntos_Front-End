@@ -59,7 +59,7 @@ body {
 .butt {
     display: flex;
     justify-content: center;
-
+    margin-bottom: 8%;
 }
 
 a {
@@ -108,7 +108,7 @@ form {
 }
 
 .nomJoueurStats {
-    margin-top: 15%;
+    margin-top: 11%;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
