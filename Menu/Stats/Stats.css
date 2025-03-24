@@ -81,7 +81,7 @@ input {
 label {
     font-size: 20px;
     font-family: "Sonsie One", sans-serif;
-    color: var(--blue-color);
+    color: var(--selected-color);
     text-align: center;
 }
 
@@ -101,7 +101,7 @@ form {
 }
 
 .borderBot {
-    background-color: var(--blue-color);
+    background-color: var(--selected-color);
     margin-bottom: 10%;;
     height: 100%;
     border-radius: 5%;;
