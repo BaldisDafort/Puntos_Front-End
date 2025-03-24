@@ -229,6 +229,20 @@ function calcScreen() {
     html.style.backgroundColor = "black"
 }
 
+
+function adjustSize() {
+    if (window.innerWidth < 600) {
+        document.querySelector('table').style.width = '90%';
+        document.querySelector('table').style.margin = '5% auto';
+    } else {
+        document.querySelector('table').style.width = '70%';
+        document.querySelector('table').style.margin = '2% auto';
+    }
+}
+
+window.addEventListener('resize', adjustSize);
+window.addEventListener('load', adjustSize);
+
 // Événement au chargement de la page pour lancer initPlateau
 window.addEventListener('load', function() {
     if(this.screen.width < 600){
